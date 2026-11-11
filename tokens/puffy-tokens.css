@@ -1,0 +1,282 @@
+/* Puffy tokens · v1
+   ---------------------------------------------------------------------------
+   One file of design tokens for Puffy and for anything you build next to it.
+   Names say what a value is for (bg, text, stroke, icon, status, elevation),
+   never what it looks like, so a token keeps its meaning when the theme,
+   brand colour or mode changes.
+
+   Three layers:
+     1. Foundations   raw values: neutrals, status hues, space, radius, type, motion
+     2. Theme         the four switches people actually change
+                        brand colour   --glass-tint        (any colour)
+                        look           data-glass-theme    quiet | puffy
+                        shape          --glass-radius      12px … 999px
+                        mode           data-glass-mode     light | dark
+     3. Tokens        job names that read from 1 and 2. Use these in your code.
+
+   Load order: puffy-tokens.css → component CSS → theme files → glass-dark.css.
+   Change the brand by setting --glass-tint, never by editing tokens.
+   Docs: https://puffyui.com/system/
+   --------------------------------------------------------------------------- */
+
+:root {
+  /* ===== 1. Foundations ===================================================== */
+
+  /* Neutrals: a cool grey that leans very slightly blue, light to dark */
+  --p-neutral-0: #ffffff;
+  --p-neutral-25: #fafafb;
+  --p-neutral-50: #f5f5f7;
+  --p-neutral-100: #ececef;
+  --p-neutral-200: #dcdce1;
+  --p-neutral-300: #c4c4cb;
+  --p-neutral-400: #9b9ba3;
+  --p-neutral-500: #6e6e73;
+  --p-neutral-600: #52525b;
+  --p-neutral-700: #3a3a41;
+  --p-neutral-800: #26262b;
+  --p-neutral-850: #1c1c20;
+  --p-neutral-900: #161619;
+  --p-neutral-950: #0d0d0f;
+  --p-ink: #14161b;
+
+  /* Status hues */
+  --p-blue-500: #2d6cf6;
+  --p-blue-700: #1d4fc2;
+  --p-blue-50: #eaf1ff;
+  --p-green-500: #17a065;
+  --p-green-700: #0b6b45;
+  --p-green-50: #e3f5ec;
+  --p-amber-500: #e09a16;
+  --p-amber-700: #8a5200;
+  --p-amber-50: #fdf0d6;
+  --p-red-500: #d12c3a;
+  --p-red-700: #b3202d;
+  --p-red-50: #fde8ea;
+
+  /* Space: a 4px grid */
+  --p-space-0: 0px;
+  --p-space-1: 4px;
+  --p-space-2: 8px;
+  --p-space-3: 12px;
+  --p-space-4: 16px;
+  --p-space-5: 20px;
+  --p-space-6: 24px;
+  --p-space-8: 32px;
+  --p-space-10: 40px;
+  --p-space-12: 48px;
+  --p-space-16: 64px;
+  --p-space-20: 80px;
+
+  /* Radius steps (the control shape itself is a theme switch, below) */
+  --p-radius-xs: 6px;
+  --p-radius-sm: 8px;
+  --p-radius-md: 12px;
+  --p-radius-lg: 16px;
+  --p-radius-xl: 22px;
+  --p-radius-2xl: 28px;
+  --p-radius-full: 999px;
+
+  /* Type */
+  --p-font-sans: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --p-font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --p-weight-regular: 400;
+  --p-weight-medium: 500;
+  --p-weight-semibold: 600;
+
+  /* Motion */
+  --p-duration-instant: 90ms;
+  --p-duration-fast: 150ms;
+  --p-duration-base: 220ms;
+  --p-duration-slow: 400ms;
+  --p-ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);   /* most things */
+  --p-ease-puff: cubic-bezier(0.3, 1.45, 0.5, 1);      /* the squish: presses, pops */
+  --p-ease-settle: cubic-bezier(0.3, 0.7, 0.3, 1);     /* panels coming to rest */
+
+  /* ===== 2. Theme switches (defaults; components already read these) ======== */
+  --glass-tint: #2d6cf6;
+  --glass-on-tint: #ffffff;
+  --glass-fg: #14161b;
+  --glass-danger: #d12c3a;
+  --glass-radius: 12px;
+  --glass-blur: 14px;
+  --glass-shadow: 16 20 30;
+
+  /* ===== 3. Tokens ========================================================== */
+
+  /* Backgrounds */
+  --p-bg-page: var(--p-neutral-50);
+  --p-bg-surface: var(--p-neutral-0);
+  --p-bg-raised: var(--p-neutral-0);
+  --p-bg-sunken: rgb(var(--glass-shadow) / 0.04);
+  --p-bg-hover: rgb(var(--glass-shadow) / 0.06);
+  --p-bg-pressed: rgb(var(--glass-shadow) / 0.1);
+  --p-bg-inverse: var(--p-ink);
+  --p-bg-brand: var(--glass-tint);
+  --p-bg-brand-soft: color-mix(in srgb, var(--glass-tint) 10%, var(--p-bg-surface));
+  --p-bg-overlay: rgb(10 12 18 / 0.4);
+
+  /* Text */
+  --p-text-primary: var(--glass-fg);
+  --p-text-secondary: rgb(var(--glass-shadow) / 0.68);
+  --p-text-tertiary: rgb(var(--glass-shadow) / 0.5);
+  --p-text-disabled: rgb(var(--glass-shadow) / 0.34);
+  --p-text-brand: color-mix(in srgb, var(--glass-tint) 82%, var(--glass-fg));
+  --p-text-on-brand: var(--glass-on-tint);
+  --p-text-inverse: var(--p-neutral-0);
+  --p-text-link: var(--p-text-brand);
+
+  /* Strokes */
+  --p-stroke-subtle: rgb(var(--glass-shadow) / 0.07);
+  --p-stroke-default: rgb(var(--glass-shadow) / 0.12);
+  --p-stroke-strong: rgb(var(--glass-shadow) / 0.2);
+  --p-stroke-brand: var(--glass-tint);
+  --p-stroke-focus: color-mix(in srgb, var(--glass-tint) 55%, transparent);
+
+  /* Icons */
+  --p-icon-primary: var(--glass-fg);
+  --p-icon-secondary: rgb(var(--glass-shadow) / 0.55);
+  --p-icon-brand: var(--glass-tint);
+  --p-icon-on-brand: var(--glass-on-tint);
+
+  /* Status: base is the dot, bar or solid fill; light is the tinted ground;
+     text is readable on light */
+  --p-info-base: var(--p-blue-500);
+  --p-info-light: var(--p-blue-50);
+  --p-info-text: var(--p-blue-700);
+  --p-success-base: var(--p-green-500);
+  --p-success-light: var(--p-green-50);
+  --p-success-text: var(--p-green-700);
+  --p-warning-base: var(--p-amber-500);
+  --p-warning-light: var(--p-amber-50);
+  --p-warning-text: var(--p-amber-700);
+  --p-error-base: var(--glass-danger);
+  --p-error-light: var(--p-red-50);
+  --p-error-text: var(--p-red-700);
+
+  /* Elevation: six named heights, lowest to highest */
+  --p-elevation-card: 0 0 0 1px rgb(var(--glass-shadow) / 0.07), 0 1px 2px rgb(var(--glass-shadow) / 0.05);
+  --p-elevation-raised: 0 0 0 1px rgb(var(--glass-shadow) / 0.07), 0 2px 4px rgb(var(--glass-shadow) / 0.05), 0 8px 16px -8px rgb(var(--glass-shadow) / 0.14);
+  --p-elevation-dropdown: 0 0 0 1px rgb(var(--glass-shadow) / 0.08), 0 4px 8px -2px rgb(var(--glass-shadow) / 0.06), 0 16px 32px -12px rgb(var(--glass-shadow) / 0.2);
+  --p-elevation-popover: 0 0 0 1px rgb(var(--glass-shadow) / 0.08), 0 6px 12px -4px rgb(var(--glass-shadow) / 0.08), 0 22px 44px -16px rgb(var(--glass-shadow) / 0.26);
+  --p-elevation-sticky: 0 1px 0 rgb(var(--glass-shadow) / 0.08), 0 8px 24px -16px rgb(var(--glass-shadow) / 0.3);
+  --p-elevation-modal: 0 0 0 1px rgb(var(--glass-shadow) / 0.08), 0 12px 24px -8px rgb(var(--glass-shadow) / 0.12), 0 40px 80px -24px rgb(var(--glass-shadow) / 0.36);
+
+  /* Shape: controls follow the theme's shape switch; containers stay calm */
+  --p-radius-control: var(--glass-radius);
+  --p-radius-field: min(var(--glass-radius), 20px);
+  --p-radius-chip: min(var(--glass-radius), 8px);
+  --p-radius-card: var(--p-radius-lg);
+  --p-radius-panel: var(--p-radius-xl);
+
+  /* Control sizes */
+  --p-size-control-sm: 30px;
+  --p-size-control-md: 36px;
+  --p-size-control-lg: 44px;
+  --p-size-hit: 44px; /* smallest touch target */
+
+  /* Type set: size / line height / weight / tracking */
+  --p-type-display: 600 56px/1.05 var(--p-font-sans);
+  --p-type-display-tracking: -0.035em;
+  --p-type-title: 600 32px/1.12 var(--p-font-sans);
+  --p-type-title-tracking: -0.025em;
+  --p-type-heading: 600 20px/1.25 var(--p-font-sans);
+  --p-type-heading-tracking: -0.012em;
+  --p-type-body: 400 15px/1.55 var(--p-font-sans);
+  --p-type-body-sm: 400 13.5px/1.5 var(--p-font-sans);
+  --p-type-label: 500 13px/1.3 var(--p-font-sans);
+  --p-type-caption: 400 12px/1.35 var(--p-font-sans);
+  --p-type-overline: 500 11px/1.2 var(--p-font-mono);
+  --p-type-overline-tracking: 0.08em;
+  --p-type-code: 400 13px/1.6 var(--p-font-mono);
+
+  /* Glass: the see-through finish */
+  --p-glass-blur: var(--glass-blur);
+  --p-glass-fill: linear-gradient(180deg, rgb(255 255 255 / 0.94), rgb(255 255 255 / 0.74));
+  --p-glass-rim: inset 0 1px 0 #fff, inset 0 0 0 1px rgb(255 255 255 / 0.55);
+  --p-glass-edge: 0 0 0 1px rgb(var(--glass-shadow) / 0.08);
+
+  /* Puff: soft colour worked out from the brand, used by the Puffy look */
+  --p-puff-warm: color-mix(in oklch, var(--glass-tint) 45%, #ff9fd6);
+  --p-puff-cool: color-mix(in oklch, var(--glass-tint) 40%, #8fe9df);
+  --p-puff-wash: color-mix(in srgb, var(--glass-tint) 8%, #fff);
+  --p-puff-glow: color-mix(in srgb, var(--glass-tint) 50%, transparent);
+
+  /* Focus ring, used on every interactive part */
+  --p-focus-ring: 0 0 0 2px var(--p-bg-surface), 0 0 0 4px var(--p-stroke-focus);
+}
+
+/* Text trim: removes the space above caps and below the baseline, so
+   text sits exactly in its box. Browsers without support ignore it. */
+.p-trim { text-box: trim-both cap alphabetic; }
+
+/* ---------- Dark mode ---------- */
+:root:is([data-glass-mode="dark"], .dark),
+:is([data-glass-mode="dark"], .dark) [data-glass-theme] {
+  --glass-fg: #f2f2f5;
+  --glass-shadow: 232 234 242;
+  --glass-danger: #ff7a84;
+
+  --p-bg-page: var(--p-neutral-950);
+  --p-bg-surface: var(--p-neutral-850);
+  --p-bg-raised: var(--p-neutral-800);
+  --p-bg-inverse: var(--p-neutral-50);
+  --p-bg-brand-soft: color-mix(in srgb, var(--glass-tint) 18%, var(--p-neutral-850));
+  --p-bg-overlay: rgb(0 0 0 / 0.6);
+
+  --p-text-brand: color-mix(in srgb, var(--glass-tint) 60%, #fff);
+  --p-text-inverse: var(--p-ink);
+
+  --p-info-light: rgb(45 108 246 / 0.18);
+  --p-info-text: #8db4ff;
+  --p-success-light: rgb(23 160 101 / 0.18);
+  --p-success-text: #5fd39a;
+  --p-warning-light: rgb(224 154 22 / 0.18);
+  --p-warning-text: #f2b84b;
+  --p-error-light: rgb(209 44 58 / 0.22);
+  --p-error-text: #ff8a93;
+
+  --p-elevation-card: 0 0 0 1px rgb(255 255 255 / 0.08), 0 1px 2px rgb(0 0 0 / 0.4);
+  --p-elevation-raised: 0 0 0 1px rgb(255 255 255 / 0.09), 0 8px 16px -8px rgb(0 0 0 / 0.6);
+  --p-elevation-dropdown: 0 0 0 1px rgb(255 255 255 / 0.1), 0 16px 32px -12px rgb(0 0 0 / 0.7);
+  --p-elevation-popover: 0 0 0 1px rgb(255 255 255 / 0.1), 0 22px 44px -16px rgb(0 0 0 / 0.75);
+  --p-elevation-sticky: 0 1px 0 rgb(255 255 255 / 0.08), 0 8px 24px -16px rgb(0 0 0 / 0.8);
+  --p-elevation-modal: 0 0 0 1px rgb(255 255 255 / 0.1), 0 40px 80px -24px rgb(0 0 0 / 0.9);
+
+  --p-glass-fill: linear-gradient(180deg, rgb(52 52 60 / 0.74), rgb(30 30 36 / 0.66));
+  --p-glass-rim: inset 0 1px 0 rgb(255 255 255 / 0.14);
+  --p-glass-edge: 0 0 0 1px rgb(255 255 255 / 0.08);
+  --p-puff-wash: color-mix(in srgb, var(--glass-tint) 14%, var(--p-neutral-900));
+  color-scheme: dark;
+}
+
+/* ---------- Quiet look: flat, exact, hairlines instead of shadows ---------- */
+[data-glass-theme="quiet"] {
+  --p-bg-page: var(--q-canvas, #f7f7f8);
+  --p-bg-surface: var(--q-surface, #ffffff);
+  --p-bg-sunken: var(--q-sunk, rgb(24 24 27 / 0.04));
+  --p-stroke-subtle: var(--q-line, rgb(24 24 27 / 0.08));
+  --p-stroke-default: var(--q-line-strong, rgb(24 24 27 / 0.13));
+  --p-text-secondary: var(--q-muted, rgb(24 24 27 / 0.56));
+  --p-elevation-card: 0 0 0 1px var(--p-stroke-subtle);
+  --p-elevation-raised: var(--q-lift, 0 1px 2px rgb(24 24 27 / 0.05)), 0 0 0 1px var(--p-stroke-default);
+  --p-elevation-dropdown: var(--q-float);
+  --p-elevation-popover: var(--q-float);
+  --p-elevation-modal: var(--q-float);
+  --p-radius-card: var(--p-radius-md);
+  --p-radius-panel: var(--p-radius-lg);
+}
+
+/* ---------- Puffy look: soft, round, a wash of the brand ---------- */
+[data-glass-theme="puffy"] {
+  --p-bg-page: var(--p-puff-wash);
+  --p-radius-card: var(--p-radius-xl);
+  --p-radius-panel: var(--p-radius-2xl);
+  --p-puff-warm: var(--pf-c1, #ff9fd6);
+  --p-puff-cool: var(--pf-c2, #8fe9df);
+  --p-puff-wash: var(--pf-wash, #f4eeff);
+  --p-puff-glow: var(--pf-glow, rgb(117 86 232 / 0.5));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --p-duration-fast: 0ms; --p-duration-base: 0ms; --p-duration-slow: 0ms; --p-ease-puff: linear; }
+}

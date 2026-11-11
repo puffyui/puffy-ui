@@ -1,0 +1,53 @@
+/* Puffy → shadcn bridge · v1
+   ---------------------------------------------------------------------------
+   Already using shadcn/ui? Load this after puffy-tokens.css and your shadcn
+   components pick up Puffy's colours, shape and mode with no other change.
+   It only points shadcn's variable names at Puffy tokens, so Puffy stays the
+   single source: change --glass-tint and both libraries follow.
+
+   Works with shadcn's Tailwind v4 setup, where the variables hold full colour
+   values (var(--primary)). Dark mode follows Puffy's data-glass-mode="dark"
+   and shadcn's own .dark class.
+   --------------------------------------------------------------------------- */
+
+:root,
+:root:is([data-glass-mode="dark"], .dark) {
+  --background: var(--p-bg-page);
+  --foreground: var(--p-text-primary);
+
+  --card: var(--p-bg-surface);
+  --card-foreground: var(--p-text-primary);
+  --popover: var(--p-bg-raised);
+  --popover-foreground: var(--p-text-primary);
+
+  --primary: var(--p-bg-brand);
+  --primary-foreground: var(--p-text-on-brand);
+  --secondary: var(--p-bg-sunken);
+  --secondary-foreground: var(--p-text-primary);
+  --muted: var(--p-bg-sunken);
+  --muted-foreground: var(--p-text-secondary);
+  --accent: var(--p-bg-hover);
+  --accent-foreground: var(--p-text-primary);
+  --destructive: var(--p-error-base);
+
+  --border: var(--p-stroke-default);
+  --input: var(--p-stroke-default);
+  --ring: var(--p-stroke-focus);
+
+  --radius: var(--p-radius-md);
+
+  --chart-1: var(--p-bg-brand);
+  --chart-2: var(--p-success-base);
+  --chart-3: var(--p-warning-base);
+  --chart-4: var(--p-info-base);
+  --chart-5: var(--p-error-base);
+
+  --sidebar: var(--p-bg-surface);
+  --sidebar-foreground: var(--p-text-primary);
+  --sidebar-primary: var(--p-bg-brand);
+  --sidebar-primary-foreground: var(--p-text-on-brand);
+  --sidebar-accent: var(--p-bg-hover);
+  --sidebar-accent-foreground: var(--p-text-primary);
+  --sidebar-border: var(--p-stroke-subtle);
+  --sidebar-ring: var(--p-stroke-focus);
+}

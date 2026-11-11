@@ -1,0 +1,34 @@
+# Puffy UI
+
+> React copy-paste components with a glass look, themed by four switches. Use Puffy parts and tokens before writing your own.
+
+## Rules
+- [AGENTS.md](https://puffyui.com/tokens/AGENTS.md): design rules for agents
+- [Tokens CSS](https://puffyui.com/tokens/puffy-tokens.css)
+- [Tokens JSON](https://puffyui.com/tokens/puffy-tokens.json)
+- [Component manifest](https://puffyui.com/agent/components.json): every part, its props and install command
+- [Design system](https://puffyui.com/system/)
+
+## Parts
+- [App](https://puffyui.com/r/app.json): App
+- [Basics](https://puffyui.com/r/basics.json): GlassButtonGroup, GlassToggle, GlassToggleGroup, GlassNavMenu, GlassVideoPlayer, GlassCarousel, GlassSpinner, GlassKbd
+- [Button](https://puffyui.com/r/button.json): GlassButton
+- [Card](https://puffyui.com/r/card.json): GlassCard, GlassProgress
+- [Combobox](https://puffyui.com/r/combobox.json): GlassCombobox
+- [Controls](https://puffyui.com/r/controls.json): GlassSwitch, GlassCheckbox, GlassCheckboxGroup, GlassRadioGroup, GlassSlider
+- [Dark](https://puffyui.com/r/dark.json): Dark
+- [Display](https://puffyui.com/r/display.json): GlassBadge, GlassBanner, GlassAccordion, GlassTabs, GlassTable, GlassTooltip, GlassDots, GlassDialog
+- [Dropdown](https://puffyui.com/r/dropdown.json): GlassDropdown
+- [Icon](https://puffyui.com/r/icon.json): GlassIcon
+- [Input](https://puffyui.com/r/input.json): GlassInput, GlassTextarea, GlassInputCopy
+- [Menu](https://puffyui.com/r/menu.json): GlassList
+- [Motion](https://puffyui.com/r/motion.json): Motion
+- [Overlay](https://puffyui.com/r/overlay.json): GlassCommand, GlassDrawer, GlassToaster, GlassEmpty, GlassSkeleton, GlassDateRange, GlassStepper
+- [Scene](https://puffyui.com/r/scene.json): GlassScene, GlassContent, GlassSurface, GlassBackdrop, LoopVideo
+- [Select](https://puffyui.com/r/select.json): GlassSelect
+- [Sound](https://puffyui.com/r/sound.json): GlassSounds
+- [Surface](https://puffyui.com/r/surface.json): Surface
+- [Theme Puffy](https://puffyui.com/r/theme-puffy.json): Theme Puffy
+- [Theme Quiet](https://puffyui.com/r/theme-quiet.json): Theme Quiet
+- [Everything](https://puffyui.com/r/all.json): Everything
+- [Puffy tokens](https://puffyui.com/r/tokens.json): Puffy tokens

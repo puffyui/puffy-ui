@@ -1,0 +1,2039 @@
+{
+ "name": "puffy",
+ "site": "https://puffyui.com",
+ "install": "https://puffyui.com/r/{item}.json",
+ "items": [
+  {
+   "item": "app",
+   "title": "App",
+   "description": "",
+   "install": "npx shadcn@latest add https://puffyui.com/r/app.json",
+   "files": [
+    "components/puffy/glass-app.css"
+   ],
+   "components": []
+  },
+  {
+   "item": "basics",
+   "title": "Basics",
+   "description": "Button group, Toggle, Toggle group, Navigation menu, Video player, Carousel, Spinner, Keyboard keys",
+   "install": "npx shadcn@latest add https://puffyui.com/r/basics.json",
+   "files": [
+    "components/puffy/glass-basics.jsx",
+    "components/puffy/glass-basics.css",
+    "components/puffy/glass-basics.d.ts"
+   ],
+   "components": [
+    {
+     "name": "GlassButtonGroup",
+     "props": [
+      {
+       "name": "items",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "variant",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "size",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "label",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassToggle",
+     "props": [
+      {
+       "name": "pressed",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "onChange",
+       "type": "(...args: any[]) => void",
+       "required": false
+      },
+      {
+       "name": "icon",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "label",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "size",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassToggleGroup",
+     "props": [
+      {
+       "name": "items",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "value",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "onChange",
+       "type": "(...args: any[]) => void",
+       "required": false
+      },
+      {
+       "name": "multiple",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "label",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "size",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassNavMenu",
+     "props": [
+      {
+       "name": "brand",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "items",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "actions",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "label",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassVideoPlayer",
+     "props": [
+      {
+       "name": "src",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "poster",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "title",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "autoPlay",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "loop",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "muted",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassCarousel",
+     "props": [
+      {
+       "name": "slides",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "render",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "perView",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "loop",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "autoPlay",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "label",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassSpinner",
+     "props": [
+      {
+       "name": "variant",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "size",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "tone",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "label",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassKbd",
+     "props": [
+      {
+       "name": "keys",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "live",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "size",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "item": "button",
+   "title": "Button",
+   "description": "Button with solid, glass and bubble finishes",
+   "install": "npx shadcn@latest add https://puffyui.com/r/button.json",
+   "files": [
+    "components/puffy/glass-button.jsx",
+    "components/puffy/glass-button.css",
+    "components/puffy/glass-lens.js",
+    "components/puffy/glass-button.d.ts",
+    "components/puffy/glass-lens.d.ts"
+   ],
+   "components": [
+    {
+     "name": "GlassButton",
+     "props": [
+      {
+       "name": "variant",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "effect",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "size",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "iconOnly",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "motion",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "loading",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "disabled",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "iconLeft",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "iconRight",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "onClick",
+       "type": "(...args: any[]) => void",
+       "required": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "item": "card",
+   "title": "Card",
+   "description": "Card, Progress",
+   "install": "npx shadcn@latest add https://puffyui.com/r/card.json",
+   "files": [
+    "components/puffy/glass-card.jsx",
+    "components/puffy/glass-card.css",
+    "components/puffy/glass-card.d.ts"
+   ],
+   "components": [
+    {
+     "name": "GlassCard",
+     "props": [
+      {
+       "name": "title",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "text",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "level",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "active",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "effect",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassProgress",
+     "props": [
+      {
+       "name": "value",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "max",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "label",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "showValue",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "accent",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "item": "combobox",
+   "title": "Combobox",
+   "description": "Combobox",
+   "install": "npx shadcn@latest add https://puffyui.com/r/combobox.json",
+   "files": [
+    "components/puffy/glass-combobox.jsx",
+    "components/puffy/glass-combobox.d.ts"
+   ],
+   "components": [
+    {
+     "name": "GlassCombobox",
+     "props": [
+      {
+       "name": "label",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "options",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "value",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "onChange",
+       "type": "(...args: any[]) => void",
+       "required": false
+      },
+      {
+       "name": "placeholder",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "effect",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "emptyText",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "hint",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "item": "controls",
+   "title": "Controls",
+   "description": "Checkbox, Radio, Switch, Slider",
+   "install": "npx shadcn@latest add https://puffyui.com/r/controls.json",
+   "files": [
+    "components/puffy/glass-controls.jsx",
+    "components/puffy/glass-controls.css",
+    "components/puffy/glass-controls.d.ts"
+   ],
+   "components": [
+    {
+     "name": "GlassSwitch",
+     "props": [
+      {
+       "name": "checked",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "onChange",
+       "type": "(...args: any[]) => void",
+       "required": false
+      },
+      {
+       "name": "label",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "disabled",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassCheckbox",
+     "props": [
+      {
+       "name": "checked",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "onChange",
+       "type": "(...args: any[]) => void",
+       "required": false
+      },
+      {
+       "name": "label",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "hint",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "disabled",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassCheckboxGroup",
+     "props": [
+      {
+       "name": "label",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "options",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "value",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "onChange",
+       "type": "(...args: any[]) => void",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassRadioGroup",
+     "props": [
+      {
+       "name": "label",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "options",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "value",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "onChange",
+       "type": "(...args: any[]) => void",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassSlider",
+     "props": [
+      {
+       "name": "value",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "onChange",
+       "type": "(...args: any[]) => void",
+       "required": false
+      },
+      {
+       "name": "min",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "max",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "step",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "label",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "unit",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "showValue",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "sound",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "item": "dark",
+   "title": "Dark",
+   "description": "Dark mode, load after the theme. Follows class=\"dark\" on <html>",
+   "install": "npx shadcn@latest add https://puffyui.com/r/dark.json",
+   "files": [
+    "components/puffy/glass-dark.css"
+   ],
+   "components": []
+  },
+  {
+   "item": "display",
+   "title": "Display",
+   "description": "Tabs, Accordion, Table, Dialog, Badge, Banner, Tooltip, Carousel dots",
+   "install": "npx shadcn@latest add https://puffyui.com/r/display.json",
+   "files": [
+    "components/puffy/glass-display.jsx",
+    "components/puffy/glass-display.css",
+    "components/puffy/glass-display.d.ts"
+   ],
+   "components": [
+    {
+     "name": "GlassBadge",
+     "props": [
+      {
+       "name": "tone",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "dot",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "effect",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassBanner",
+     "props": [
+      {
+       "name": "title",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "tone",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "action",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassAccordion",
+     "props": [
+      {
+       "name": "items",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "defaultOpen",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassTabs",
+     "props": [
+      {
+       "name": "tabs",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "value",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "onChange",
+       "type": "(...args: any[]) => void",
+       "required": false
+      },
+      {
+       "name": "variant",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "effect",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "label",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassTable",
+     "props": [
+      {
+       "name": "columns",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "rows",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "caption",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassTooltip",
+     "props": [
+      {
+       "name": "label",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "effect",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassDots",
+     "props": [
+      {
+       "name": "count",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "index",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "onChange",
+       "type": "(...args: any[]) => void",
+       "required": false
+      },
+      {
+       "name": "label",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassDialog",
+     "props": [
+      {
+       "name": "open",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "title",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "description",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "actions",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "item": "dropdown",
+   "title": "Dropdown",
+   "description": "Dropdown",
+   "install": "npx shadcn@latest add https://puffyui.com/r/dropdown.json",
+   "files": [
+    "components/puffy/glass-dropdown.jsx",
+    "components/puffy/glass-dropdown.d.ts"
+   ],
+   "components": [
+    {
+     "name": "GlassDropdown",
+     "props": [
+      {
+       "name": "label",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "items",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "onSelect",
+       "type": "(...args: any[]) => void",
+       "required": false
+      },
+      {
+       "name": "effect",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "variant",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "size",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "align",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "iconLeft",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "item": "icon",
+   "title": "Icon",
+   "description": "Icons",
+   "install": "npx shadcn@latest add https://puffyui.com/r/icon.json",
+   "files": [
+    "components/puffy/glass-icon.jsx",
+    "components/puffy/glass-icon.d.ts"
+   ],
+   "components": [
+    {
+     "name": "GlassIcon",
+     "props": [
+      {
+       "name": "name",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "size",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "strokeWidth",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "variant",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "item": "input",
+   "title": "Input",
+   "description": "Input, Text area, Input copy",
+   "install": "npx shadcn@latest add https://puffyui.com/r/input.json",
+   "files": [
+    "components/puffy/glass-input.jsx",
+    "components/puffy/glass-input.d.ts"
+   ],
+   "components": [
+    {
+     "name": "GlassInput",
+     "props": [
+      {
+       "name": "label",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "hint",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "error",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "iconLeft",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "prefix",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "suffix",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "action",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "effect",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "id",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "disabled",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassTextarea",
+     "props": [
+      {
+       "name": "label",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "hint",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "error",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "effect",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "id",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "disabled",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "maxLength",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "value",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "defaultValue",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "onChange",
+       "type": "(...args: any[]) => void",
+       "required": false
+      },
+      {
+       "name": "rows",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassInputCopy",
+     "props": [
+      {
+       "name": "label",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "value",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "hint",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "effect",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "item": "menu",
+   "title": "Menu",
+   "description": "The menu used by Select, Combobox and Dropdown",
+   "install": "npx shadcn@latest add https://puffyui.com/r/menu.json",
+   "files": [
+    "components/puffy/glass-menu.jsx",
+    "components/puffy/glass-menu.d.ts"
+   ],
+   "components": [
+    {
+     "name": "GlassList",
+     "props": [
+      {
+       "name": "id",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "role",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "effect",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "align",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "items",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "activeIndex",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "selectedValue",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "labelledBy",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "empty",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "item": "motion",
+   "title": "Motion",
+   "description": "",
+   "install": "npx shadcn@latest add https://puffyui.com/r/motion.json",
+   "files": [
+    "components/puffy/glass-motion.css"
+   ],
+   "components": []
+  },
+  {
+   "item": "overlay",
+   "title": "Overlay",
+   "description": "Command menu, Drawer, Toast, Empty, Skeleton, Date range, Stepper",
+   "install": "npx shadcn@latest add https://puffyui.com/r/overlay.json",
+   "files": [
+    "components/puffy/glass-overlay.jsx",
+    "components/puffy/glass-overlay.d.ts"
+   ],
+   "components": [
+    {
+     "name": "GlassCommand",
+     "props": [
+      {
+       "name": "open",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "onOpenChange",
+       "type": "(...args: any[]) => void",
+       "required": false
+      },
+      {
+       "name": "groups",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "onSelect",
+       "type": "(...args: any[]) => void",
+       "required": false
+      },
+      {
+       "name": "placeholder",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "hotkey",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "effect",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassDrawer",
+     "props": [
+      {
+       "name": "open",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "title",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "description",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "side",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "actions",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassToaster",
+     "props": [
+      {
+       "name": "position",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassEmpty",
+     "props": [
+      {
+       "name": "icon",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "title",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "actions",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassSkeleton",
+     "props": [
+      {
+       "name": "width",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "height",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "radius",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "lines",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassDateRange",
+     "props": [
+      {
+       "name": "value",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "onChange",
+       "type": "(...args: any[]) => void",
+       "required": false
+      },
+      {
+       "name": "label",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "presets",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "effect",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "today",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassStepper",
+     "props": [
+      {
+       "name": "steps",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "current",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "orientation",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "item": "scene",
+   "title": "Scene",
+   "description": "Picture backdrop for glass finishes",
+   "install": "npx shadcn@latest add https://puffyui.com/r/scene.json",
+   "files": [
+    "components/puffy/glass-scene.jsx",
+    "components/puffy/glass-scene.css",
+    "components/puffy/glass-scene.d.ts"
+   ],
+   "components": [
+    {
+     "name": "GlassScene",
+     "props": [
+      {
+       "name": "material",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "appearance",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassContent",
+     "props": [
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassSurface",
+     "props": [
+      {
+       "name": "as",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "interactive",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "radius",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "material",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "style",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "GlassBackdrop",
+     "props": [
+      {
+       "name": "src",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "video",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "poster",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "alt",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "appearance",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "shiftY",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    },
+    {
+     "name": "LoopVideo",
+     "props": [
+      {
+       "name": "src",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "poster",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "item": "select",
+   "title": "Select",
+   "description": "Select",
+   "install": "npx shadcn@latest add https://puffyui.com/r/select.json",
+   "files": [
+    "components/puffy/glass-select.jsx",
+    "components/puffy/glass-select.d.ts"
+   ],
+   "components": [
+    {
+     "name": "GlassSelect",
+     "props": [
+      {
+       "name": "label",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "options",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "value",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "onChange",
+       "type": "(...args: any[]) => void",
+       "required": false
+      },
+      {
+       "name": "placeholder",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "effect",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "disabled",
+       "type": "boolean",
+       "required": false
+      },
+      {
+       "name": "hint",
+       "type": "string",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "item": "sound",
+   "title": "Sound",
+   "description": "Optional sounds for every part",
+   "install": "npx shadcn@latest add https://puffyui.com/r/sound.json",
+   "files": [
+    "components/puffy/glass-sound.jsx",
+    "components/puffy/glass-sound.d.ts"
+   ],
+   "components": [
+    {
+     "name": "GlassSounds",
+     "props": [
+      {
+       "name": "on",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "volume",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "typing",
+       "type": "any",
+       "required": false
+      },
+      {
+       "name": "children",
+       "type": "React.ReactNode",
+       "required": false
+      },
+      {
+       "name": "className",
+       "type": "string",
+       "required": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "item": "surface",
+   "title": "Surface",
+   "description": "Shared surface styles used by most parts",
+   "install": "npx shadcn@latest add https://puffyui.com/r/surface.json",
+   "files": [
+    "components/puffy/glass-surface.css"
+   ],
+   "components": []
+  },
+  {
+   "item": "theme-puffy",
+   "title": "Theme Puffy",
+   "description": "Puffy theme",
+   "install": "npx shadcn@latest add https://puffyui.com/r/theme-puffy.json",
+   "files": [
+    "components/puffy/glass-theme-puffy.css"
+   ],
+   "components": []
+  },
+  {
+   "item": "theme-quiet",
+   "title": "Theme Quiet",
+   "description": "Quiet theme",
+   "install": "npx shadcn@latest add https://puffyui.com/r/theme-quiet.json",
+   "files": [
+    "components/puffy/glass-theme-quiet.css"
+   ],
+   "components": []
+  },
+  {
+   "item": "all",
+   "title": "Everything",
+   "description": "Every Puffy part, both themes and dark mode",
+   "install": "npx shadcn@latest add https://puffyui.com/r/all.json",
+   "files": [],
+   "components": []
+  },
+  {
+   "item": "tokens",
+   "title": "Puffy tokens",
+   "description": "Job-named design tokens, the shadcn bridge, the W3C token file and AGENTS.md rules for AI agents",
+   "install": "npx shadcn@latest add https://puffyui.com/r/tokens.json",
+   "files": [
+    "tokens/puffy-tokens.css",
+    "tokens/puffy-shadcn.css",
+    "tokens/puffy-tokens.json",
+    "tokens/AGENTS.md"
+   ],
+   "components": []
+  }
+ ]
+}

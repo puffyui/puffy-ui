@@ -1,0 +1,30 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "all",
+  "type": "registry:ui",
+  "title": "Everything",
+  "description": "Every Puffy part, both themes and dark mode",
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/app.json",
+    "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/basics.json",
+    "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/button.json",
+    "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/card.json",
+    "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/combobox.json",
+    "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/controls.json",
+    "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/dark.json",
+    "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/display.json",
+    "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/dropdown.json",
+    "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/icon.json",
+    "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/input.json",
+    "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/menu.json",
+    "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/motion.json",
+    "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/overlay.json",
+    "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/scene.json",
+    "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/select.json",
+    "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/sound.json",
+    "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/surface.json",
+    "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/theme-puffy.json",
+    "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/theme-quiet.json"
+  ],
+  "files": []
+}

@@ -1,0 +1,487 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "puffy",
+  "homepage": "https://github.com/puffyui/puffy-ui",
+  "items": [
+    {
+      "name": "app",
+      "type": "registry:ui",
+      "title": "App",
+      "description": "",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/puffy/glass-app.css",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-app.css"
+        }
+      ]
+    },
+    {
+      "name": "basics",
+      "type": "registry:ui",
+      "title": "Basics",
+      "description": "Button group, Toggle, Toggle group, Navigation menu, Video player, Carousel, Spinner, Keyboard keys",
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/surface.json"
+      ],
+      "files": [
+        {
+          "path": "components/puffy/glass-basics.jsx",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-basics.jsx"
+        },
+        {
+          "path": "components/puffy/glass-basics.css",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-basics.css"
+        },
+        {
+          "path": "components/puffy/glass-basics.d.ts",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-basics.d.ts"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Button with solid, glass and bubble finishes",
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/surface.json"
+      ],
+      "files": [
+        {
+          "path": "components/puffy/glass-button.jsx",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-button.jsx"
+        },
+        {
+          "path": "components/puffy/glass-button.css",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-button.css"
+        },
+        {
+          "path": "components/puffy/glass-lens.js",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-lens.js"
+        },
+        {
+          "path": "components/puffy/glass-button.d.ts",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-button.d.ts"
+        },
+        {
+          "path": "components/puffy/glass-lens.d.ts",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-lens.d.ts"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "Card, Progress",
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/surface.json"
+      ],
+      "files": [
+        {
+          "path": "components/puffy/glass-card.jsx",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-card.jsx"
+        },
+        {
+          "path": "components/puffy/glass-card.css",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-card.css"
+        },
+        {
+          "path": "components/puffy/glass-card.d.ts",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-card.d.ts"
+        }
+      ]
+    },
+    {
+      "name": "combobox",
+      "type": "registry:ui",
+      "title": "Combobox",
+      "description": "Combobox",
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/menu.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/surface.json"
+      ],
+      "files": [
+        {
+          "path": "components/puffy/glass-combobox.jsx",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-combobox.jsx"
+        },
+        {
+          "path": "components/puffy/glass-combobox.d.ts",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-combobox.d.ts"
+        }
+      ]
+    },
+    {
+      "name": "controls",
+      "type": "registry:ui",
+      "title": "Controls",
+      "description": "Checkbox, Radio, Switch, Slider",
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/surface.json"
+      ],
+      "files": [
+        {
+          "path": "components/puffy/glass-controls.jsx",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-controls.jsx"
+        },
+        {
+          "path": "components/puffy/glass-controls.css",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-controls.css"
+        },
+        {
+          "path": "components/puffy/glass-controls.d.ts",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-controls.d.ts"
+        }
+      ]
+    },
+    {
+      "name": "dark",
+      "type": "registry:ui",
+      "title": "Dark",
+      "description": "Dark mode, load after the theme. Follows class=\"dark\" on <html>",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/puffy/glass-dark.css",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-dark.css"
+        }
+      ]
+    },
+    {
+      "name": "display",
+      "type": "registry:ui",
+      "title": "Display",
+      "description": "Tabs, Accordion, Table, Dialog, Badge, Banner, Tooltip, Carousel dots",
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/surface.json"
+      ],
+      "files": [
+        {
+          "path": "components/puffy/glass-display.jsx",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-display.jsx"
+        },
+        {
+          "path": "components/puffy/glass-display.css",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-display.css"
+        },
+        {
+          "path": "components/puffy/glass-display.d.ts",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-display.d.ts"
+        }
+      ]
+    },
+    {
+      "name": "dropdown",
+      "type": "registry:ui",
+      "title": "Dropdown",
+      "description": "Dropdown",
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/button.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/menu.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/surface.json"
+      ],
+      "files": [
+        {
+          "path": "components/puffy/glass-dropdown.jsx",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-dropdown.jsx"
+        },
+        {
+          "path": "components/puffy/glass-dropdown.d.ts",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-dropdown.d.ts"
+        }
+      ]
+    },
+    {
+      "name": "icon",
+      "type": "registry:ui",
+      "title": "Icon",
+      "description": "Icons",
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/motion.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/surface.json"
+      ],
+      "files": [
+        {
+          "path": "components/puffy/glass-icon.jsx",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-icon.jsx"
+        },
+        {
+          "path": "components/puffy/glass-icon.d.ts",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-icon.d.ts"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "Input, Text area, Input copy",
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/surface.json"
+      ],
+      "files": [
+        {
+          "path": "components/puffy/glass-input.jsx",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-input.jsx"
+        },
+        {
+          "path": "components/puffy/glass-input.d.ts",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-input.d.ts"
+        }
+      ]
+    },
+    {
+      "name": "menu",
+      "type": "registry:ui",
+      "title": "Menu",
+      "description": "The menu used by Select, Combobox and Dropdown",
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/surface.json"
+      ],
+      "files": [
+        {
+          "path": "components/puffy/glass-menu.jsx",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-menu.jsx"
+        },
+        {
+          "path": "components/puffy/glass-menu.d.ts",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-menu.d.ts"
+        }
+      ]
+    },
+    {
+      "name": "motion",
+      "type": "registry:ui",
+      "title": "Motion",
+      "description": "",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/puffy/glass-motion.css",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-motion.css"
+        }
+      ]
+    },
+    {
+      "name": "overlay",
+      "type": "registry:ui",
+      "title": "Overlay",
+      "description": "Command menu, Drawer, Toast, Empty, Skeleton, Date range, Stepper",
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/app.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/surface.json"
+      ],
+      "files": [
+        {
+          "path": "components/puffy/glass-overlay.jsx",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-overlay.jsx"
+        },
+        {
+          "path": "components/puffy/glass-overlay.d.ts",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-overlay.d.ts"
+        }
+      ]
+    },
+    {
+      "name": "scene",
+      "type": "registry:ui",
+      "title": "Scene",
+      "description": "Picture backdrop for glass finishes",
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/surface.json"
+      ],
+      "files": [
+        {
+          "path": "components/puffy/glass-scene.jsx",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-scene.jsx"
+        },
+        {
+          "path": "components/puffy/glass-scene.css",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-scene.css"
+        },
+        {
+          "path": "components/puffy/glass-scene.d.ts",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-scene.d.ts"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "Select",
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/menu.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/surface.json"
+      ],
+      "files": [
+        {
+          "path": "components/puffy/glass-select.jsx",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-select.jsx"
+        },
+        {
+          "path": "components/puffy/glass-select.d.ts",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-select.d.ts"
+        }
+      ]
+    },
+    {
+      "name": "sound",
+      "type": "registry:ui",
+      "title": "Sound",
+      "description": "Optional sounds for every part",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/puffy/glass-sound.jsx",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-sound.jsx"
+        },
+        {
+          "path": "components/puffy/glass-sound.d.ts",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-sound.d.ts"
+        }
+      ]
+    },
+    {
+      "name": "surface",
+      "type": "registry:ui",
+      "title": "Surface",
+      "description": "Shared surface styles used by most parts",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/puffy/glass-surface.css",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-surface.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-puffy",
+      "type": "registry:ui",
+      "title": "Theme Puffy",
+      "description": "Puffy theme",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/puffy/glass-theme-puffy.css",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-theme-puffy.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-quiet",
+      "type": "registry:ui",
+      "title": "Theme Quiet",
+      "description": "Quiet theme",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/puffy/glass-theme-quiet.css",
+          "type": "registry:ui",
+          "target": "components/puffy/glass-theme-quiet.css"
+        }
+      ]
+    },
+    {
+      "name": "all",
+      "type": "registry:ui",
+      "title": "Everything",
+      "description": "Every Puffy part, both themes and dark mode",
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/app.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/basics.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/button.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/card.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/combobox.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/controls.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/dark.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/display.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/dropdown.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/icon.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/input.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/menu.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/motion.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/overlay.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/scene.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/select.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/sound.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/surface.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/theme-puffy.json",
+        "https://raw.githubusercontent.com/puffyui/puffy-ui/main/r/theme-quiet.json"
+      ],
+      "files": []
+    },
+    {
+      "name": "tokens",
+      "type": "registry:item",
+      "title": "Puffy tokens",
+      "description": "Job-named design tokens, the shadcn bridge, the W3C token file and AGENTS.md rules for AI agents",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "tokens/puffy-tokens.css",
+          "type": "registry:file",
+          "target": "styles/puffy-tokens.css"
+        },
+        {
+          "path": "tokens/puffy-shadcn.css",
+          "type": "registry:file",
+          "target": "styles/puffy-shadcn.css"
+        },
+        {
+          "path": "tokens/puffy-tokens.json",
+          "type": "registry:file",
+          "target": "tokens/puffy-tokens.json"
+        },
+        {
+          "path": "tokens/AGENTS.md",
+          "type": "registry:file",
+          "target": "AGENTS.md"
+        }
+      ]
+    }
+  ]
+}
